@@ -155,4 +155,28 @@ DATE: 2024-06-22 - TIME: 05:30
 "In summary, transactions move value from transaction inputs to transaction outputs. An input is a reference to a previous transaction's output, showing where the value is coming from. A transaction output directs a specific value to a new owner's bitcoin address and can include a change output back to the original owner. Outputs from one transaction can be used as inputs in a new transaction, thus creating a chain of ownership as the value is moved from owner to owner." - pg. 21
 </p>
 
+<p align="justify">
+"Importantly, a wallet application can construct transactions even if it is completely offline. Like writing a check at home and later sending it to the bank in an envelope, the transaction does not need to be constructed an signed while connected to the bitcoin network." - pg. 22
+</p>
+
+<p align="justify">
+"A bitcoin wallet application that runs as a full-node client actually contains a copy of every unspent output from every transaction in the blockchain. This allows a wallet to construct transaction inputs as well as quickly verify incoming transactions as having correct inputs. However, because a full-node client takes up a lot of disk space, most user wallets run 'lightweight' clients that track only the user's own unspent outputs." - pg. 22
+</p>
+
+<p align="justify">
+"If the wallet application does not maintain a copy of unspent transaction outputs, it can query the bitcoin network to retrieve this information using a variety of APIs available by different providers or by asking a full-node using an application programming interface (API) call." - pg. 22
+</p>
+
+<p align="justify">
+"A transaction output is created in the form of a script that creates an encumbrance on the value and can only be redeemed by the introduction of a solution to the script." - pg. 24
+</p>
+
+<p align="justify">
+"Because the transaction contains all the information necessary to process, it does not matter how or where it is transmitted to the bitcoin network. The bitcoin network is a peer-to-peer network, with each bitcoin client participating by connecting to several other bitcoin clients. The purpose of the bitcoin network is to propagate transactions and blocks to all participants." - pg. 25
+</p>
+
+<p align="justify">
+"Any system, such as a server, desktop application, or wallet, that participates in the bitcoin network by 'speaking' the bitcoin protocol is called a bitcoin node. [...]. Any bitcoin node that receives a valid transaction it has not seen before will immediately foward it to all other nodes to which it is connected, a propagation technique known as flooding. Thus, the transaction rapidly propagates out across the peer-to-peer network, reaching a large percentage of the nodes within a few seconds." - pg. 25
+</p>
+
 <p align="justify"></p>
